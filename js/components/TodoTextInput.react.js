@@ -1,3 +1,6 @@
+/**
+ * ES6的模块引入，React不加大括号
+ */
 import React from 'react';
 
 const ENTER_KEY_CODE = 13;

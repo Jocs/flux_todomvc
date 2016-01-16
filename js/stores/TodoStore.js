@@ -85,6 +85,10 @@ AppDispatcher.register(function(action){
 			update(action.id, {complete: true});
 			TodoStore.emitChange();
 			break;
+		case TodoConstants.TODO_UNDO_COMPLETE:
+			update(action.id, {complete: false});
+			TodoStore.emitChange();
+			break;
 		case TodoConstants.TODO_UPDATE_TEXT:
 			text = action.text.trim();
 			if(text !== ''){
